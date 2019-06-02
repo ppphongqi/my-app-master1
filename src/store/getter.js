@@ -21,5 +21,11 @@ export default {
     },
     buynum:(state) => {
         return state.buynum
+    },
+
+    // 当前物品的数据
+    curgood:(state) => {
+        return state.curgood
     }
+
 }

@@ -37,6 +37,7 @@ export default{
     },
 
 
+
     // 获取收藏信息
     async getCollect({ commit }){
         const result = await reqCollect();
@@ -44,6 +45,11 @@ export default{
             const userCollect = result.data;
             commit('receiveCollect',{userCollect})
         }
+    },
+
+    // 传递当前物品数据
+    setCurGood:({ commit }) =>{
+        commit('setCurGood',curgood)
     },
 
 

@@ -19,8 +19,9 @@
                 <p class="price"> ￥{{ item.price }}</p>
             </div>
 
+
             <div class="swipe">
-                <van-swipe :autoplay="3000" v-if="show">
+                <van-swipe :autoplay="3000" v-if="show" height="250" width="300">
 
                     <van-swipe-item  v-for="(image, index) in item.images" :key="index">
 
@@ -35,7 +36,7 @@
 
 
             <div class="detail">
-                <p class="desc">{{ item.desc }}</p>
+                <p class="desc">{{ item.title }}</p>
             </div>
 
             <div class="bottom">
@@ -49,10 +50,7 @@
             </div>
 
         </div>
-
-
-
-
+    </div>
 <!--        没有发布的情况-->
         <div class="nothingbox" v-if="hide">
             <div class="nothing">
@@ -65,7 +63,7 @@
         </div>
 
 
-    </div>
+
     </div>
 </template>
 
@@ -80,14 +78,17 @@
 
                 fabuinfo: [
                     {
+                        'title':'网工五天修炼',
                         'id':'1',
                         'price':'125.1',
                         'images':[
                             "http://qiniu.mges.wang/img/2_1.jpg",
                             "http://qiniu.mges.wang/img/2_1.jpg",
-                            "http://qiniu.mges.wang/img/2_1.jpg"
+                            "http://qiniu.mges.wang/img/2_1.jpg",
+                            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558077984974&di=567c87caa3a0a5ff35c31566fccef3b2&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F133e91e65d8f3f9e1540b940e70ea3ab352cec5d.jpg",
+                            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558077984971&di=594a3ef8b1e67a6c0764c8bc3674d4ce&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F0736e4bebe05901ac2ef47e6e0554e5f4036ed7c3be13-N48Fka_fw658"
                             ],
-                        'desc':'定制的绝对超值',
+                        'desc':'定制的绝对超值你肯定会超级喜欢的那种东西。。。。哈哈哈哈哈的算法框架搭建发哈恢复健康了上帝就发卡顺丰快递哈加快了发货了复读机啊快点发货卡拉收到回复卡拉会离开的技术封锁看到了发哈离开家1',
                         'time':'2019-6-1',
 
 
@@ -174,11 +175,12 @@
         position: relative;
         text-align: center;
     }
+
     div{
         display:block;
     }
     .block{
-        height: 4.4rem;
+        height: 3rem;
     }
 
 
@@ -217,6 +219,11 @@
         box-sizing: border-box;
         background-position: 0 center;
     }
+    .goodstitle{
+        height:2.5rem;
+        font-size:2rem;
+        text-align: center;
+    }
     .price {
         color: red;
         font-size: 1.5rem;
@@ -226,12 +233,13 @@
         margin-top: .8rem;
         padding: 0 1rem;
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     .detail .desc{
         font-size: 1.1rem;
         color: #000;
-        font-weight: 550;
+
     }
 
     .detail .desc{
@@ -292,12 +300,12 @@
         font-weight: 400;
     }
     .swipe{
-        height:200px;
+        height:250px;
         z-index:1;
     }
     .images{
         height:100%;
-        width:90%;
+        /*width:90%;*/
         margin:0 auto;
     }
 

@@ -7,8 +7,6 @@
 
 import ajax from './ajax'
 
-
-
 const BASE_URL = 'http://172.29.51.137:8899/api/v1';
 
 // 获取登录状态

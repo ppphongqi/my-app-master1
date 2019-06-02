@@ -156,8 +156,8 @@ export default {
                 this.$router.push('/forget');
             },
             zhuce(){
-                this.$router.push('/register');
-                // this.$store.dispatch('getUserInfo');
+                // this.$router.push('/register');
+                this.$store.dispatch('getUserInfo');
 
             },
 

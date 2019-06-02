@@ -13,6 +13,8 @@ const state = {
 
     userInfo:[], //用户信息
 
+    curgood:[],
+
 
 
 };
@@ -25,6 +27,11 @@ const mutations = {
             state.isLogin = true;
 
             console.log(`登录状态：`+state.isLogin)
+        },
+
+    // 传递当前物品数据
+        setCurGood:(state,curgood) =>{
+            state.curgood = curgood
         },
 
 

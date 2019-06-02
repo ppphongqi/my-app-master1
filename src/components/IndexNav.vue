@@ -1,19 +1,6 @@
 <template>
     <div class="news" >
 
-<!--        iview的ui Menu-->
-
-<!--        <Menu mode="horizontal" :theme="theme1" active-name="1" class="nav" :class="totop?'fixed':'Menu'" v-model="selected">-->
-<!--            <MenuItem name="1">-->
-<!--                查看出售-->
-<!--            </MenuItem>-->
-<!--            <MenuItem name="2">-->
-<!--                求购信息-->
-<!--            </MenuItem>-->
-<!--        </Menu>-->
-
-
-<!--        mint的ui-->
         <div class="wrapper">
         <!--<mt-navbar :class="totop?'fixed':'mint-navbar'" v-model="selected">-->
         <mt-navbar  v-model="selected">
@@ -27,7 +14,14 @@
 
 <!--            出售-->
             <mt-tab-container-item class="container-item" id="1">
-                test1
+
+
+
+
+
+
+
+
             </mt-tab-container-item>
 
 

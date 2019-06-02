@@ -19,11 +19,6 @@ import 'mint-ui/lib/style.css';
 // baseurl
 // import global_ from './Base.vue';
 
-axios.default.timeout = 5000;
-axios.default.baseURI = 'http:172.29.51.137:8899/api/vi';
-// axios.defaults.withCredentials=true;
-
-
 
 Vue.use(VueAwesomeSwiper);
 // Vue.use(Vuex);

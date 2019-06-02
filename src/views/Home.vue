@@ -8,38 +8,6 @@
 
     <div class="block"></div>
 
-<!--    叫叫的-->
-<!--    <van-tabs sticky v-model="tab_active" class="tab_active">-->
-<!--      <van-tab title="出售">-->
-<!--        <div id="scroll-box" :style="{height: scroll_box_height + 'px'}">-->
-          <!--<vue-waterfall-easy :imgsArr="imgsArr" @scrollReachBottom="getData">-->
-             <!--这里是卡片的说明 -->
-            <!--<div class="img-info" slot-scope="props">-->
-              <!--<p class="some-info">出售序号: {{props.index}}</p>-->
-              <!--<p class="some-info">{{props.value.info}}</p>-->
-            <!--</div>-->
-             <!--这里是卡片的说明 -->
-          <!--</vue-waterfall-easy>-->
-<!--        </div>-->
-<!--      </van-tab>-->
-
-<!--      <van-tab title="求购">-->
-<!--        <div id="scroll-box" :style="{height: scroll_box_height + 'px'}">-->
-          <!--<vue-waterfall-easy :imgsArr="imgsArr" @scrollReachBottom="getData">-->
-             <!--这里是卡片的说明 -->
-            <!--<div class="img-info" slot-scope="props">-->
-              <!--<p class="some-info">求购序号: {{props.index}}</p>-->
-              <!--<p class="some-info">{{props.value.info}}</p>-->
-            <!--</div>-->
-             <!--这里是卡片的说明 -->
-          <!--</vue-waterfall-easy>-->
-<!--        </div>-->
-<!--      </van-tab>-->
-
-<!--    </van-tabs>-->
-
-
-    <!-- 引入 suspendedBall 组件 -->
     <suspendedBall/>
 
   </div>
@@ -76,6 +44,9 @@ export default {
       // group: 0,
       // scroll_box_height: null
 
+      // 当前物品
+      curgood:[],
+
 
     };
   },
@@ -106,7 +77,7 @@ export default {
     },
     changeImgArr() {
       axios
-        .get("/static/mock/data-change.json") // 真实环境中，后端会根据参数group返回新的图片数组，这里我用一个静态json文件模拟
+        .get("/static/mock/data-change.json")
         .then(res => {
           this.imgsArr = res.data;
         });
@@ -127,6 +98,9 @@ export default {
   created() {
     this.setScrollBoxHeight();
     this.getData();
+
+
+
   }
 };
 </script>
